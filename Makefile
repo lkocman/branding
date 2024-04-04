@@ -150,6 +150,7 @@ install:
 	mkdir -p $(DESTDIR)/usr/share/icons/hicolor/scalable/emblems $(DESTDIR)/usr/share/icons/hicolor/symbolic/emblems
 	ln -sf /usr/share/pixmaps/distribution-logos/square-hicolor.svg ${DESTDIR}/usr/share/icons/hicolor/scalable/emblems/distributor-logo.svg
 	ln -sf /usr/share/pixmaps/distribution-logos/square-symbolic.svg $(DESTDIR)/usr/share/icons/hicolor/symbolic/emblems/distributor-logo-symbolic.svg
+	ln -sf /usr/share/pixmaps/distribution-logos/apple-touch-icon.png $(DESTDIR)/usr/share/icons/hicolor/symbolic/emblems/apple-touch-icon.png
 	# Brand file
 	cp -r SUSE-brand $(DESTDIR)/etc/
 
