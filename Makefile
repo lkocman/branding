@@ -89,7 +89,7 @@ wallpaper.d:
 	done
 	rsvg-convert raw-theme-drop/desktop-1920x1200.svg -o openSUSE/wallpapers/openSUSEdefault/screenshot.png
 	optipng -o5 openSUSE/wallpapers/openSUSEdefault/screenshot.png
-	cp -p kde-workspace/metadata.desktop openSUSE/wallpapers/openSUSEdefault/metadata.desktop
+	cp -p kde-workspace/metadata.json openSUSE/wallpapers/openSUSEdefault/metadata.json
 
 wallpaper.d_clean:
 	rm -rf openSUSE/wallpapers
@@ -146,11 +146,6 @@ install:
 	# Libreoffice branding
 	mkdir -p $(DESTDIR)/usr/share/libreoffice
 	cp -r openSUSE/libreoffice/program $(DESTDIR)/usr/share/libreoffice
-	# osrelease icons
-	mkdir -p $(DESTDIR)/usr/share/icons/hicolor/scalable/emblems $(DESTDIR)/usr/share/icons/hicolor/symbolic/emblems
-	ln -sf /usr/share/pixmaps/distribution-logos/square-hicolor.svg ${DESTDIR}/usr/share/icons/hicolor/scalable/emblems/distributor-logo.svg
-	ln -sf /usr/share/pixmaps/distribution-logos/square-symbolic.svg $(DESTDIR)/usr/share/icons/hicolor/symbolic/emblems/distributor-logo-symbolic.svg
-	ln -sf /usr/share/pixmaps/distribution-logos/apple-touch-icon.png $(DESTDIR)/usr/share/icons/hicolor/symbolic/emblems/apple-touch-icon.png
 	# Brand file
 	cp -r SUSE-brand $(DESTDIR)/etc/
 
