@@ -85,8 +85,7 @@ wallpaper.d:
 		ln -sf openSUSE${VERSION_NO_DOT}-$${size}.png openSUSE/wallpapers/default-$${size}.png; \
 		ln -sf openSUSEdefault/contents/images/$${size}.png openSUSE/wallpapers/openSUSE${VERSION_NO_DOT}-$${size}.png; \
 	done
-	rsvg-convert raw-theme-drop/desktop-1920x1200.svg -o openSUSE/wallpapers/openSUSEdefault/screenshot.png
-	optipng -o5 openSUSE/wallpapers/openSUSEdefault/screenshot.png
+	ln -s contents/images/1920x1200.png openSUSE/wallpapers/openSUSEdefault/screenshot.png
 	cp -p kde-workspace/metadata.json openSUSE/wallpapers/openSUSEdefault/metadata.json
 
 wallpaper.d_clean:
